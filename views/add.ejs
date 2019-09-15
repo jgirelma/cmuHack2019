@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Checkout example · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/checkout/">
+
+    <!-- Bootstrap core CSS -->
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Custom fonts for this template -->
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <div class="container">
+  <div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h2>Add your Item</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      
+      <form action="/add" method="post" encType="multipart/form-data">
+        <div class="form-group" >
+          <label for="itemName">Item Name</label>
+          <input type="text" class="form-control" id="itemName" name="name" aria-describedby="itemName" placeholder="Enter item name">
+        </div>
+        <div class="form-group">
+          <label for="itemDescription">Item Description</label>
+          <input type="text" class="form-control" id="itemDescription" name="description" placeholder="Item Description">
+        </div>
+          <div class="form-group">
+            <label for="contact">Contact</label>
+            <input type="text" class="form-control" id="contact" name="contact" placeholder="Contact">
+          </div>
+          <div class="form-group">
+                <label for="file">Image of Item</label>
+                <input type="file"  id="file" name="file" placeholder="uploadImage">
+            </div>
+    
+        <button id="btn" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2017-2019 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+</div>
+<script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+              crossorigin="anonymous"></script>
+<!--
+<script>
+
+        $(function(){
+            
+            $('#btn').on('click', function(e){
+                e.preventDefault();
+                var form = {
+                    name: $('#itemName').val(),
+                    description: $('#itemDescription').val(),
+                    contact: $('#contact').val(),
+                    file: $('#file').val()
+                }
+                console.log($('#file').val());
+                $.ajax({
+                    url: '/add', //this is the submit URL
+                    type: 'POST', //or POST
+                    data: form,
+                    success: function(data){
+                         console.log(data)
+                    }
+                });
+            });
+        });
+        
+    </script>
+-->
+</html>
