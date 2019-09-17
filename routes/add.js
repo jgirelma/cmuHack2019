@@ -34,7 +34,9 @@ router.get('/', function(req, res, next) {
 //     });
 //   });
 router.post('/', function (req, res) {
-    // console.log(req.files.file)
+  // console.log(req.files.foo)
+
+  console.log(req.body);
     // var file = req.files.file;
     // console.log(file);
     // file.mv('public/images/'+file.name, function(err) {

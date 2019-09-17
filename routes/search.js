@@ -14,8 +14,10 @@ var db = new sqlite3.Database('items', (err) => {
 });
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('search', {results: []
+router.get('/', async function(req, res, next) {
+    var rows = await returnRows();
+    rows = rows.slice(0, 3);
+  res.render('search', {results: rows
     });
 });
 
@@ -27,7 +29,7 @@ router.post('/', async function (req, res) {
 
     rows = await returnRows()
     
-
+    console.log(rows);
     res.render('search', {results: rows});
 });
 
